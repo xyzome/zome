@@ -5,6 +5,15 @@ import scrollEffect from '../hooks/Scroll';
 import Homepage from './Homepage';
 
 function Footer() {
+  const services = [
+    { name: 'App Development', link: Homepage },
+    { name: 'Web Development', link: Homepage },
+    { name: 'Cloud Hosting', link: Homepage },
+    { name: 'Digital Marketing', link: Homepage },
+    { name: 'UI & UX Design', link: Homepage },
+    { name: 'Social Media Marketing', link: Homepage },
+  ];
+
   return (
     <>
       <footer className="bg-white dark:bg-gray-900" data-aos="fade-up">
@@ -22,24 +31,18 @@ function Footer() {
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Our Services</h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                  <li className="mb-4">
-                    <Link to={Homepage} onClick={scrollEffect} className="hover:underline" aria-label="App Development service">App Development</Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link to={Homepage} onClick={scrollEffect} className="hover:underline" aria-label="Web Development service">Web Development</Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link to={Homepage} onClick={scrollEffect} className="hover:underline" aria-label="Cloud Hosting service">Cloud Hosting</Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link to={Homepage} onClick={scrollEffect} className="hover:underline" aria-label="Digital Marketing service">Digital Marketing</Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link to={Homepage} onClick={scrollEffect} className="hover:underline" aria-label="UI/UX Design service">UI & UX Design</Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link to={Homepage} onClick={scrollEffect} className="hover:underline" aria-label="Social Media Marketing service">Social Media Marketing</Link>
-                  </li>
+                  {services.map((service, index) => (
+                    <li className="mb-4" key={index}>
+                      <Link
+                        to={service.link}
+                        onClick={scrollEffect}
+                        className="hover:underline"
+                        aria-label={`${service.name} service`}
+                      >
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div>

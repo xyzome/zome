@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 
 function Hero() {
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-white dark:bg-gray-900 pt-8">
       <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div
           className="mr-auto place-self-center lg:col-span-7"
@@ -33,11 +33,12 @@ function Hero() {
           </p>
           <a
             href="tel:+91 8657655887"
-            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-            data-aos="fade-up" // Add AOS attribute for animation
-            data-aos-delay="300" // Delay before the animation starts
+            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gray-900 border border-gray-800 rounded-lg shadow-lg hover:bg-gray-800 hover:shadow-xl transition-all duration-300 focus:ring-4 focus:ring-gray-700 dark:text-white dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-500"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            aria-label="Call us at +91 8657655887"
           >
-            Make A Call
+            Call Us Now
           </a>
         </div>
         <div

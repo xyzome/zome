@@ -1,5 +1,8 @@
 import React, { useRef, useEffect } from "react";
-
+import carbon from '../images/carbonfix.png';
+import funeral from '../images/funeral.png';
+import perfume from '../images/perfume.png';
+import dentist from '../images/dentist.png';
 const CompletedProjects = () => {
     const scrollContainerRef = useRef(null); // Reference to the scrollable container
     const autoScrollRef = useRef(null); // To keep track of the auto-scroll interval
@@ -7,27 +10,31 @@ const CompletedProjects = () => {
     const projects = [
         {
             id: 1,
-            category: "Booking",
-            title: "Chalo Khelo",
-            image: "/api/placeholder/400/300",
+            category: "NGO",
+            title: "Carbon Compensation Platform",
+            image: carbon,
+            link:"https://carbonfix.in"
         },
         {
             id: 2,
-            category: "Health Care",
-            title: "Doctors APP",
-            image: "/api/placeholder/400/300",
+            category: "Compassionate Care",
+            title: "Funeral Service",
+            image: funeral,
+            link:"https://shahfuneralservice.in"
         },
         {
             id: 3,
-            category: "Education",
-            title: "Just Academy",
-            image: "/api/placeholder/400/300",
+            category: "Grocery",
+            title: "Uimne Perfume ",
+            image: perfume,
+            link:"https://perfume-reactwebsite.vercel.app"
         },
         {
             id: 4,
-            category: "Finance",
-            title: "Budget Planner",
-            image: "/api/placeholder/400/300",
+            category: "Health Care",
+            title: "Orthosqure ",
+            image: dentist,
+            link:"https://consult.orthosquare.com/"
         },
     ];
 
@@ -111,7 +118,9 @@ const CompletedProjects = () => {
                         
                     >
                         {projects.map((project) => (
-                            <div
+                            <a
+                                href={project.link}
+                                target="_blank"
                                 key={project.id}
                                 className="flex-shrink-0 w-[90%] sm:w-1/2 md:w-1/3 snap-start bg-gray-900 rounded-lg shadow-lg hover:scale-90 transition-transform duration-200 cursor-pointer overflow-hidden border-2 border-white"
 
@@ -129,7 +138,7 @@ const CompletedProjects = () => {
                                         {project.category}
                                     </p>
                                 </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </div>

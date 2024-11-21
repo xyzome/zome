@@ -23,13 +23,14 @@ function CTA() {
         <div className="flex justify-center mt-4 lg:mt-0">
           <a
             href="tel:+91 8657655887"
-            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gray-900 border border-gray-800 rounded-lg shadow-lg hover:bg-gray-800 hover:shadow-xl transition-all duration-300 focus:ring-4 focus:ring-gray-700 dark:text-white dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-500"
             data-aos="fade-up"
             data-aos-delay="200"
             aria-label="Call us at +91 8657655887"
           >
             Call Us Now
           </a>
+
         </div>
       </div>
     </section>
