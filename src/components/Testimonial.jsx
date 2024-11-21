@@ -60,22 +60,13 @@ const FeedbackSection = () => {
         <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
           <h2
             id="feedback-heading"
-            className="text-4xl sm:text-5xl font-bold text-white mb-4"
+            className="text-3xl sm:text-4xl font-bold text-white mb-4"
           >
-            Some Feedback From Client
+            Happy Customers
           </h2>
           <p className="text-gray-300 text-lg mb-6">
-            We are proud to share the positive feedback we have received from
-            many of the families and individuals who we supported during their
-            difficult times.{" "}
-            {/* <a
-              className="text-blue-700 underline"
-              href="https://www.google.com/search?q=shah+funeral+ser+ice&oq=shah+funeral+ser+ice&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yDQgCEAAYhgMYgAQYigUyDQgDEAAYhgMYgAQYigUyCggEEAAYgAQYogQyBggFEEUYPTIGCAYQRRg8MgYIBxBFGDzSAQgyNDQ4ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8&lqi=ChRzaGFoIGZ1bmVyYWwgc2VydmljZUiJ1pH4rbqAgAhaIhAAEAEQAhgAGAEYAiIUc2hhaCBmdW5lcmFsIHNlcnZpY2WSARFhbWJ1bGFuY2Vfc2VydmljZaoBVxABKhgiFHNoYWggZnVuZXJhbCBzZXJ2aWNlKAAyHxABIhtDGt5-ILvxb-osuqZwjRO9-FK7Y8NB_TByqkQyGBACIhRzaGFoIGZ1bmVyYWwgc2VydmljZQ#lrd=0xa91473f1d36b6e23:0x654650597d9f379a,3,,,,&rlimm=7297608591490365338"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Share Your Experience
-            </a> */}
+          Turning smiles into success stories – our commitment to joyous customer experiences goes beyond satisfaction, crafting a journey where delight is the ultimate destination{" "}
+         
           </p>
           <div className="flex items-center space-x-4">
             <button
