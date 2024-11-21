@@ -2,7 +2,7 @@ import React from 'react';
 
 function CTA() {
   return (
-    <section className="bg-white dark:bg-gray-900" aria-labelledby="cta-section">
+    <section className="bg-white dark:bg-gray-800" aria-labelledby="cta-section">
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div className="max-w-screen-md">
           <h2
@@ -17,7 +17,7 @@ function CTA() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            X Y Tech helps you connect with friends, family, and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups, Watch, and Marketplace.
+            Zome helps you connect with friends, family, and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups, Watch, and Marketplace.
           </p>
         </div>
         <div className="flex justify-center mt-4 lg:mt-0">

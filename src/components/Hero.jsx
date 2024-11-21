@@ -37,7 +37,7 @@ function Hero() {
             data-aos="fade-up" // Add AOS attribute for animation
             data-aos-delay="300" // Delay before the animation starts
           >
-            Get Started
+            Make A Call
           </a>
         </div>
         <div
