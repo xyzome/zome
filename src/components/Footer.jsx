@@ -2,16 +2,16 @@ import React from 'react';
 import logo from '../images/logo.png';
 import { Link } from 'react-router-dom';
 import scrollEffect from '../hooks/Scroll';
-import Homepage from './Homepage';
+// import Homepage from './Homepage';
 
 function Footer() {
   const services = [
-    { name: 'App Development', link: Homepage },
-    { name: 'Web Development', link: Homepage },
-    { name: 'Cloud Hosting', link: Homepage },
-    { name: 'Digital Marketing', link: Homepage },
-    { name: 'UI & UX Design', link: Homepage },
-    { name: 'Social Media Marketing', link: Homepage },
+    { id: 1, name: 'App Development' },
+    { id: 2, name: 'Web Development' },
+    { id: 3, name: 'Cloud Hosting' },
+    { id: 4, name: 'Digital Marketing' },
+    { id: 5, name: 'UI & UX Design' },
+    { id: 6, name: 'Social Media Marketing' },
   ];
 
   return (
@@ -31,18 +31,21 @@ function Footer() {
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Our Services</h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                  {services.map((service, index) => (
-                    <li className="mb-4" key={index}>
+                  {services.map((service) => (
+                    <li className="mb-4" key={service.id}>  {/* Changed from services.id to service.id */}
                       <Link
-                        to={service.link}
+                        to="/service"
+                        state={{ serviceId: service.id }}                        
                         onClick={scrollEffect}
                         className="hover:underline"
                         aria-label={`${service.name} service`}
                       >
                         {service.name}
                       </Link>
+
                     </li>
                   ))}
+
                 </ul>
               </div>
               <div>

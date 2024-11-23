@@ -36,25 +36,25 @@ const AboutUs = () => {
                     </div>
                     <div className="lg:w-1/2 mt-8 lg:mt-0 space-y-6">
                         <div data-aos="fade-up">
-                            <h3 className="text-2xl font-semibold text-indigo-400">Unleash Success</h3>
+                            <h3 className="text-2xl font-semibold text-white">Unleash Success</h3>
                             <p className="text-gray-300">
                                 A synergy of innovation and precision. We don’t follow trends; we set them.
                             </p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="200">
-                            <h3 className="text-2xl font-semibold text-indigo-400">Maximize Potential</h3>
+                            <h3 className="text-2xl font-semibold text-white">Maximize Potential</h3>
                             <p className="text-gray-300">
                                 Every challenge becomes an opportunity. Unleash untapped power and soar to new heights.
                             </p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="400">
-                            <h3 className="text-2xl font-semibold text-indigo-400">Unique Solutions</h3>
+                            <h3 className="text-2xl font-semibold text-white">Unique Solutions</h3>
                             <p className="text-gray-300">
                                 Where uniqueness meets functionality and aspirations find their bespoke reality.
                             </p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="600">
-                            <h3 className="text-2xl font-semibold text-indigo-400">Our Precision</h3>
+                            <h3 className="text-2xl font-semibold text-white">Our Precision</h3>
                             <p className="text-gray-300">
                                 Precision you can trust. Reliability you can depend on – because quality is our commitment.
                             </p>

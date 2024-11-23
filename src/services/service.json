@@ -1,0 +1,168 @@
+{
+    "services": [
+        {
+            "id": 1,
+            "title": "App Development",
+            "image": "https://example.com/images/app-development.jpg",
+            "description": "Embark on a journey of digital evolution with our Mobile App Alchemy. From concept to code, we sculpt innovative experiences that seamlessly blend form and function, transforming visions into interactive realities.",
+            "bullets": [
+                "Android (Java/Kotlin)",
+                "iOS (Swift/Objective-C)",
+                "Flutter (Dart)",
+                "React Native",
+                "Firebase"
+            ],
+            "howWeWork": [
+                {
+                    "step": "Step 1: Consultation",
+                    "detail": "We start by understanding your goals, target audience, and app requirements to create a clear roadmap."
+                },
+                {
+                    "step": "Step 2: Design & Development",
+                    "detail": "Our team crafts visually appealing designs and develops high-performance mobile applications."
+                },
+                {
+                    "step": "Step 3: Testing & Deployment",
+                    "detail": "Rigorous testing ensures a seamless user experience before the app is launched."
+                }
+            ],
+            "accordion": [
+                {
+                    "title": "Android",
+                    "content": "Custom Android apps tailored to meet your business requirements with high performance and scalability."
+                },
+                {
+                    "title": "iOS",
+                    "content": "Deliver seamless experiences with iOS applications designed for the Apple ecosystem."
+                },
+                {
+                    "title": "Flutter",
+                    "content": "Cross-platform development with Flutter to ensure a consistent user experience across Android and iOS."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Web Development",
+            "image": "https://example.com/images/web-development.jpg",
+            "description": "Build robust and scalable websites with our expert web development services. We turn your ideas into responsive, high-performing web solutions.",
+            "bullets": [
+                "React.js",
+                "Node.js",
+                "MongoDB",
+                "Express.js",
+                "HTML/CSS/JavaScript"
+            ],
+            "howWeWork": [
+                {
+                    "step": "Step 1: Requirement Gathering",
+                    "detail": "Collaborate to understand your website's purpose, features, and design preferences."
+                },
+                {
+                    "step": "Step 2: Development",
+                    "detail": "We develop responsive and user-friendly websites tailored to your business needs."
+                },
+                {
+                    "step": "Step 3: Launch & Maintenance",
+                    "detail": "After deployment, we ensure your website remains updated and optimized."
+                }
+            ],
+            "accordion": [
+                {
+                    "title": "Front-End Development",
+                    "content": "Create visually appealing and interactive user interfaces using modern frameworks."
+                },
+                {
+                    "title": "Back-End Development",
+                    "content": "Build powerful server-side logic and APIs for seamless data handling."
+                },
+                {
+                    "title": "Full-Stack Solutions",
+                    "content": "Combine front-end and back-end development to deliver complete web solutions."
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Cloud Hosting",
+            "image": "https://example.com/images/cloud-hosting.jpg",
+            "description": "Leverage the power of the cloud with our secure and scalable hosting solutions. Our services ensure optimal performance and uptime for your applications.",
+            "bullets": [
+                "AWS",
+                "Google Cloud Platform (GCP)",
+                "Microsoft Azure",
+                "Docker & Kubernetes",
+                "Linux Server Administration"
+            ],
+            "howWeWork": [
+                {
+                    "step": "Step 1: Analysis",
+                    "detail": "Identify hosting needs and choose the best cloud hosting plan for your business."
+                },
+                {
+                    "step": "Step 2: Setup",
+                    "detail": "We configure and deploy cloud servers tailored to your requirements."
+                },
+                {
+                    "step": "Step 3: Monitoring & Support",
+                    "detail": "Continuous monitoring ensures high performance, with 24/7 support available."
+                }
+            ],
+            "accordion": [
+                {
+                    "title": "Shared Hosting",
+                    "content": "Cost-effective hosting solutions for small businesses and personal projects."
+                },
+                {
+                    "title": "Dedicated Servers",
+                    "content": "High-performance hosting for resource-intensive applications."
+                },
+                {
+                    "title": "Managed Cloud Hosting",
+                    "content": "Fully managed hosting services for effortless scalability and reliability."
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Digital Marketing",
+            "image": "https://example.com/images/digital-marketing.jpg",
+            "description": "Enhance your brand visibility and drive traffic with our result-oriented digital marketing services.",
+            "bullets": [
+                "SEO (Search Engine Optimization)",
+                "Google Ads",
+                "Social Media Marketing Tools",
+                "Content Creation",
+                "Analytics & Reporting"
+            ],
+            "howWeWork": [
+                {
+                    "step": "Step 1: Strategy Development",
+                    "detail": "Identify target audience and goals to create a custom marketing strategy."
+                },
+                {
+                    "step": "Step 2: Execution",
+                    "detail": "Implement campaigns and content designed to attract and engage customers."
+                },
+                {
+                    "step": "Step 3: Monitoring & Optimization",
+                    "detail": "Continuously track performance metrics and refine strategies for maximum ROI."
+                }
+            ],
+            "accordion": [
+                {
+                    "title": "SEO Services",
+                    "content": "Improve your website's organic search rankings with tailored optimization strategies."
+                },
+                {
+                    "title": "Social Media Marketing",
+                    "content": "Engage your audience with creative campaigns across all social media platforms."
+                },
+                {
+                    "title": "Pay-Per-Click (PPC)",
+                    "content": "Drive immediate traffic with Google Ads and other PPC strategies."
+                }
+            ]
+        }
+    ]
+}

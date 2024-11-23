@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '../images/logo.png';
+import scrollToTop from '../hooks/Scroll'
+
 
 const Dropdown = ({ title, items, isOpen, toggle }) => {
   return (
@@ -63,10 +65,10 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-gray-300">
+            <Link to="/" className="text-white hover:text-gray-300" onClick={scrollToTop}>
               Home
             </Link>
-            <Link to="/about" className="text-white hover:text-gray-300">
+            <Link to="/about" className="text-white hover:text-gray-300" onClick={scrollToTop}>
               About
             </Link>
             <Dropdown
@@ -75,7 +77,7 @@ const Navbar = () => {
               isOpen={isServicesOpen}
               toggle={setIsServicesOpen}
             />
-            <Link to="/contact" className="text-white hover:text-gray-300">
+            <Link to="/contact" className="text-white hover:text-gray-300" onClick={scrollToTop}>
               Contact
             </Link>
           </div>
