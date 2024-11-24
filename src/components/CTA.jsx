@@ -2,18 +2,18 @@ import React from 'react';
 
 function CTA() {
   return (
-    <section className="bg-white dark:bg-gray-800" aria-labelledby="cta-section">
+    <section className="bg-gray-900" aria-labelledby="cta-section"> {/* Set bg-gray-900 to the root section */}
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div className="max-w-screen-md">
           <h2
             id="cta-section"
-            className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+            className="mb-4 text-4xl tracking-tight font-extrabold text-white" // Ensure the text is visible on dark background
             data-aos="fade-up"
           >
             Let's find more that brings us together.
           </h2>
           <p
-            className="mb-8 font-light text-gray-500 sm:text-xl dark:text-gray-400"
+            className="mb-8 font-light text-gray-300 sm:text-xl" // Adjust text color for dark background
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -30,7 +30,6 @@ function CTA() {
           >
             Call Us Now
           </a>
-
         </div>
       </div>
     </section>

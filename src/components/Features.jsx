@@ -20,6 +20,7 @@ function Features() {
           </p>
         </div>
         <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+          {/* Gathering Requirements */}
           <div
             className="flex flex-col items-center"
             data-aos="fade-up"
@@ -44,6 +45,8 @@ function Features() {
               Understanding your needs and defining the project scope to ensure we meet all your expectations and business goals.
             </p>
           </div>
+
+          {/* Design */}
           <div
             className="flex flex-col items-center"
             data-aos="fade-up"
@@ -66,6 +69,8 @@ function Features() {
               Creating intuitive and visually appealing designs that provide a seamless user experience and align with your brand identity.
             </p>
           </div>
+
+          {/* Development */}
           <div
             className="flex flex-col items-center"
             data-aos="fade-up"
@@ -93,6 +98,8 @@ function Features() {
               Writing clean and efficient code to bring your designs to life, ensuring functionality and scalability.
             </p>
           </div>
+
+          {/* Testing */}
           <div
             className="flex flex-col items-center"
             data-aos="fade-up"
@@ -111,23 +118,17 @@ function Features() {
                   clipRule="evenodd"
                 />
                 <path
-                  d="M6 10.8a2 2 0 00-2-2v5a2 2 0 002-2v-1.2z"
-                />
-                <path
-                  d="M10 9a1 1 0 01-1-1v-1.5a1 1 0 112 0V8a1 1 0 01-1 1zm1.5 1v4h-3v-4h3z"
-                />
-                <path
-                  fillRule="evenodd"
-                  d="M12.5 14h-1.586a1 1 0 01-.707-.293l-1.829-1.828a1 1 0 00-1.414 0l-1.828 1.828A1 1 0 014.086 14H2.5a.5.5 0 01-.5-.5V6.5a.5.5 0 01.5-.5h2.586a1 1 0 01.707.293L8 7.828l2.707-2.707a1 1 0 011.414 0l2.707 2.707L15.5 6h2.5a.5.5 0 01.5.5v7a.5.5 0 01-.5.5z"
-                  clipRule="evenodd"
+                  d="M6 10.8a2 2 0 00-2-2v5a2 2 0 002-2zm6-2h6v6H6V7.8z"
                 />
               </svg>
             </div>
             <h3 className="mb-2 text-xl font-bold dark:text-white">Testing</h3>
             <p className="text-gray-500 dark:text-gray-400">
-              Performing rigorous testing to identify and fix any issues, ensuring your app or website is ready for launch.
+              Conducting thorough testing to ensure the application works smoothly, free from bugs, and provides the desired performance.
             </p>
           </div>
+
+          {/* Deployment */}
           <div
             className="flex flex-col items-center"
             data-aos="fade-up"
@@ -142,41 +143,14 @@ function Features() {
               >
                 <path
                   fillRule="evenodd"
-                  d="M10 3a7 7 0 00-7 7v5a7 7 0 007 7h6a7 7 0 007-7V10a7 7 0 00-7-7H10zM9 5h2v2H9V5zm2 8H9v-1h2v1zm-2-4h2v2H9V9z"
+                  d="M10 18a2 2 0 110-4 2 2 0 010 4zm7.071-2.071A6 6 0 0013 6V4a8 8 0 00-8 8h1.071A7.953 7.953 0 0110 6c3.313 0 6 2.686 6 6v1.071z"
                   clipRule="evenodd"
-                />
-                <path
-                  d="M6 10v5a6 6 0 006 6h6a6 6 0 006-6V10a6 6 0 00-6-6H12a6 6 0 00-6 6z"
                 />
               </svg>
             </div>
             <h3 className="mb-2 text-xl font-bold dark:text-white">Deployment</h3>
             <p className="text-gray-500 dark:text-gray-400">
-              Deploying your application to a live environment and ensuring everything is functioning as expected.
-            </p>
-          </div>
-          <div
-            className="flex flex-col items-center"
-            data-aos="fade-up"
-            data-aos-delay="700"
-          >
-            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-              <svg
-                className="w-5 h-5 text-white lg:w-10 lg:h-10 dark:text-white"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M2 4.5A1.5 1.5 0 013.5 3h13a1.5 1.5 0 011.5 1.5V15a1.5 1.5 0 01-1.5 1.5H3.5A1.5 1.5 0 012 15V4.5zM3.5 5a.5.5 0 00-.5.5v10a.5.5 0 00.5.5h13a.5.5 0 00.5-.5V5a.5.5 0 00-.5-.5H3.5zM15 6H9a1 1 0 00-1 1v8a1 1 0 001 1h6a1 1 0 001-1V7a1 1 0 00-1-1z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <h3 className="mb-2 text-xl font-bold dark:text-white">Maintenance</h3>
-            <p className="text-gray-500 dark:text-gray-400">
-              Providing ongoing support and maintenance to ensure your app or website continues to perform well and meets your needs.
+              Deploying the application to production with the utmost care, ensuring that it is live, accessible, and secure.
             </p>
           </div>
         </div>

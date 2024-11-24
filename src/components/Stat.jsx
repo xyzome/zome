@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 
 function Stat() {
   return (
-    <section className="bg-white dark:bg-gray-900" id="about">
+    <section className="bg-gray-900" id="about"> {/* Set bg-gray-900 to the root section */}
       <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
         {/* Use flex-row for mobile, grid for larger screens */}
         <dl className="flex flex-row flex-wrap sm:grid sm:grid-cols-3 gap-8 mx-auto text-gray-900 dark:text-white">

@@ -6,6 +6,11 @@ import scrollToTop from '../hooks/Scroll'
 
 
 const Dropdown = ({ title, items, isOpen, toggle }) => {
+  const handleItemClick = (item) => {
+    toggle(false);  // Close the dropdown after an item is clicked
+    // You can add any further actions like navigation or tracking here if needed.
+  };
+
   return (
     <div className="relative">
       <button
@@ -16,8 +21,7 @@ const Dropdown = ({ title, items, isOpen, toggle }) => {
         <ChevronDown className="w-4 h-4" />
       </button>
       <div
-        className={`absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-gray-800 ring-1 ring-gray-700 z-50 transition-all duration-200 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 hidden'
-          }`}
+        className={`absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-gray-800 ring-1 ring-gray-700 z-50 transition-all duration-200 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 hidden'}`}
       >
         <div className="py-2">
           {items.map((item) => (
@@ -25,6 +29,7 @@ const Dropdown = ({ title, items, isOpen, toggle }) => {
               key={item.id}
               to="/service"
               state={{ serviceId: item.id }}
+              onClick={() => handleItemClick(item)}  // Close dropdown on item click
               className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               {item.name}
@@ -49,6 +54,10 @@ const Navbar = () => {
     { id: 6, name: 'Social Media Marketing', link: 'Homepage' },
   ];
 
+  const handleLinkClick = () => {
+    setIsOpen(false); // Close the mobile menu on navigation
+  };
+
   return (
     <nav className="bg-gray-900 shadow-lg fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,10 +74,10 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-gray-300" onClick={scrollToTop}>
+            <Link to="/" className="text-white hover:text-gray-300" onClick={() => { handleLinkClick(); scrollToTop(); }}>
               Home
             </Link>
-            <Link to="/about" className="text-white hover:text-gray-300" onClick={scrollToTop}>
+            <Link to="/about" className="text-white hover:text-gray-300" onClick={() => { handleLinkClick(); scrollToTop(); }}>
               About
             </Link>
             <Dropdown
@@ -77,7 +86,7 @@ const Navbar = () => {
               isOpen={isServicesOpen}
               toggle={setIsServicesOpen}
             />
-            <Link to="/contact" className="text-white hover:text-gray-300" onClick={scrollToTop}>
+            <Link to="/contact" className="text-white hover:text-gray-300" onClick={() => { handleLinkClick(); scrollToTop(); }}>
               Contact
             </Link>
           </div>
@@ -101,12 +110,14 @@ const Navbar = () => {
             <Link
               to="/"
               className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md"
+              onClick={handleLinkClick} // Close mobile menu on link click
             >
               Home
             </Link>
             <Link
               to="/about"
               className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md"
+              onClick={handleLinkClick} // Close mobile menu on link click
             >
               About
             </Link>
@@ -119,6 +130,7 @@ const Navbar = () => {
             <Link
               to="/contact"
               className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md"
+              onClick={handleLinkClick}
             >
               Contact
             </Link>

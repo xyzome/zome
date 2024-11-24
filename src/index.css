@@ -13,3 +13,15 @@
           scrollbar-width: none;  /* Firefox */
     }
   }
+
+
+/* Prevent horizontal overflow globally */
+body {
+  overflow-x: hidden !important;
+}
+
+/* Apply this to html and body for extra specificity */
+html,
+body {
+  overflow-x: hidden;
+}

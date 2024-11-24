@@ -6,9 +6,9 @@
             "image": "https://example.com/images/app-development.jpg",
             "description": "Embark on a journey of digital evolution with our Mobile App Alchemy. From concept to code, we sculpt innovative experiences that seamlessly blend form and function, transforming visions into interactive realities.",
             "bullets": [
-                "Android (Java/Kotlin)",
-                "iOS (Swift/Objective-C)",
-                "Flutter (Dart)",
+                "Android ",
+                "iOS ",
+                "Flutter ",
                 "React Native",
                 "Firebase"
             ],
@@ -47,11 +47,11 @@
             "image": "https://example.com/images/web-development.jpg",
             "description": "Build robust and scalable websites with our expert web development services. We turn your ideas into responsive, high-performing web solutions.",
             "bullets": [
-                "React.js",
-                "Node.js",
+                "React",
+                "Node Js",
                 "MongoDB",
-                "Express.js",
-                "HTML/CSS/JavaScript"
+                "Express",
+                "Tailwind CSS"
             ],
             "howWeWork": [
                 {
@@ -90,8 +90,6 @@
             "bullets": [
                 "AWS",
                 "Google Cloud Platform (GCP)",
-                "Microsoft Azure",
-                "Docker & Kubernetes",
                 "Linux Server Administration"
             ],
             "howWeWork": [
@@ -131,7 +129,7 @@
             "bullets": [
                 "SEO (Search Engine Optimization)",
                 "Google Ads",
-                "Social Media Marketing Tools",
+                "Performance Marketing",
                 "Content Creation",
                 "Analytics & Reporting"
             ],
@@ -161,6 +159,86 @@
                 {
                     "title": "Pay-Per-Click (PPC)",
                     "content": "Drive immediate traffic with Google Ads and other PPC strategies."
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "UI/UX Design",
+            "image": "https://example.com/images/ui-ux-design.jpg",
+            "description": "Craft intuitive and aesthetically pleasing designs that enhance user experience. Our design process bridges creativity and usability to deliver exceptional interfaces.",
+            "bullets": [
+                "Figma",
+                "Sketch",
+                "Responsive Design"
+            ],
+            "howWeWork": [
+                {
+                    "step": "Step 1: Ideation",
+                    "detail": "Understand user needs and design goals through research and brainstorming."
+                },
+                {
+                    "step": "Step 2: Design & Prototype",
+                    "detail": "Create wireframes and prototypes that represent the structure and flow of the product."
+                },
+                {
+                    "step": "Step 3: Finalization",
+                    "detail": "Refine designs based on feedback and handoff to development for implementation."
+                }
+            ],
+            "accordion": [
+                {
+                    "title": "Wireframing & Prototyping",
+                    "content": "Visualize the product structure and user flow through interactive prototypes."
+                },
+                {
+                    "title": "User Research",
+                    "content": "Conduct user interviews and usability testing to ensure a user-centric design."
+                },
+                {
+                    "title": "Responsive Design",
+                    "content": "Design adaptable interfaces for a seamless experience across devices."
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Social Media Marketing",
+            "image": "https://example.com/images/social-media-marketing.jpg",
+            "description": "Elevate your online presence with targeted and engaging social media marketing campaigns. Connect with your audience and build your brand effectively.",
+            "bullets": [
+                "Campaign Management",
+                "Content Creation",
+                "Social Media Strategy",
+                "Performance Analysis",
+                "Audience Engagement"
+            ],
+            "howWeWork": [
+                {
+                    "step": "Step 1: Strategy Development",
+                    "detail": "Identify goals and develop a roadmap for effective social media campaigns."
+                },
+                {
+                    "step": "Step 2: Content Creation",
+                    "detail": "Design and curate impactful content tailored to each platform."
+                },
+                {
+                    "step": "Step 3: Execution & Analysis",
+                    "detail": "Run campaigns, monitor performance, and optimize for best results."
+                }
+            ],
+            "accordion": [
+                {
+                    "title": "Campaign Strategy",
+                    "content": "Tailored strategies to achieve your marketing goals on platforms like Instagram, Facebook, and LinkedIn."
+                },
+                {
+                    "title": "Content Creation",
+                    "content": "Develop creative and engaging content that resonates with your audience."
+                },
+                {
+                    "title": "Analytics & Reporting",
+                    "content": "Track campaign performance and provide detailed insights for continuous improvement."
                 }
             ]
         }
