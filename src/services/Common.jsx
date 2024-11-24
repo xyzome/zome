@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import servicesData from './service.json';
 import { CheckCircle, FileText, Target, Shield, Users } from 'lucide-react'; 
 
+
 const HeroSection = ({ service }) => {
   // Split the bullets array into two parts: the first 3 and the rest
   const firstHalfBullets = service.bullets.slice(0, 3);
@@ -13,24 +14,31 @@ const HeroSection = ({ service }) => {
       className="hero-section flex flex-wrap items-center justify-between py-20 px-10 bg-gray-900 text-gray-200"
       data-aos="fade-up"
     >
-      <div className="hero-image w-full md:w-1/2 mb-10 md:mb-0" data-aos="fade-left">
+      {/* Image Section */}
+      <div
+        className="hero-image w-full md:w-1/2 mb-10 md:mb-0 flex justify-center items-center"
+        data-aos="fade-left"
+      >
         <img
           src={service.image}
           alt={service.title}
-          className="w-full h-auto object-cover rounded-lg shadow-lg"
+          className="max-w-full h-auto object-cover rounded-lg shadow-lg"
         />
       </div>
+
+      {/* Content Section */}
       <div className="hero-content w-full md:w-1/2 pl-0 md:pl-10" data-aos="fade-right">
         <h2 className="text-4xl font-bold text-indigo-200 mb-4">{service.title}</h2>
         <p className="text-lg text-gray-300 mb-6">{service.description}</p>
 
+        {/* Service Bullets */}
         <div className="service-list flex flex-wrap space-y-3 text-gray-300">
           {/* Left side - first 3 bullets */}
           <div className="w-full md:w-1/2">
             <ul>
               {firstHalfBullets.map((bullet, index) => (
                 <li key={index} className="flex items-center mb-3">
-                  <CheckCircle className="mr-2 text-indigo-500" size={20} />  {/* Using the icon */}
+                  <CheckCircle className="mr-2 text-indigo-500" size={20} /> {/* Using the icon */}
                   <span>{bullet}</span>
                 </li>
               ))}
@@ -42,7 +50,7 @@ const HeroSection = ({ service }) => {
             <ul>
               {secondHalfBullets.map((bullet, index) => (
                 <li key={index} className="flex items-center mb-3">
-                  <CheckCircle className="mr-2 text-indigo-500" size={20} />  {/* Using the icon */}
+                  <CheckCircle className="mr-2 text-indigo-500" size={20} /> {/* Using the icon */}
                   <span>{bullet}</span>
                 </li>
               ))}
@@ -125,9 +133,7 @@ const Accordion = ({ items, open, toggleAccordion }) => (
           {item.title}
         </button>
         {open === index && (
-          <div className="px-4 py-3 text-gray-300 text-left">
-            {item.content}
-          </div>
+          <div className="px-4 py-3 text-gray-300 text-left">{item.content}</div>
         )}
       </div>
     ))}
@@ -135,27 +141,48 @@ const Accordion = ({ items, open, toggleAccordion }) => (
 );
 
 const DevelopmentProcess = ({ service, open, toggleAccordion }) => (
-  <section className="text-gray-300 bg-gray-900 body-font" data-aos="fade-up">
-    <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-      <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0" data-aos="zoom-in">
+  <section
+    className="relative text-gray-300 bg-gray-900 body-font overflow-hidden"
+    data-aos="fade-up"
+  >
+    <div className="absolute inset-0">
+      {/* Gradient Background */}
+      <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 opacity-50"></div>
+
+      {/* Circular Image with Shadow and Border */}
+      <div className="absolute top-0 right-0 h-64 w-64">
         <img
-          className="object-cover object-center rounded shadow-lg"
-          alt="Development Process"
           src={service.image}
+          alt="Service Visual"
+          className="w-full h-full object-cover rounded-full shadow-2xl border-blue-100 border-2"
         />
       </div>
+    </div>
+
+
+
+    <div className="container relative mx-auto px-5 py-24 flex flex-col items-center">
+      {/* Title */}
+      <h1 className="title-font sm:text-4xl text-3xl mb-8 font-medium text-gray-200 text-center">
+        Explore {service.title} Development Process
+      </h1>
+
+      {/* Accordion */}
       <div
-        className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
-        data-aos="fade-left"
+        className="w-full max-w-3xl bg-gray-800 rounded-lg shadow-lg p-6"
+        data-aos="zoom-in"
       >
-        <h1 className="title-font sm:text-4xl text-3xl mb-6 font-medium text-gray-200">
-          Explore {service.title} Development Process
-        </h1>
-        <Accordion items={service.accordion} open={open} toggleAccordion={toggleAccordion} />
+        <Accordion
+          items={service.accordion}
+          open={open}
+          toggleAccordion={toggleAccordion}
+        />
       </div>
     </div>
   </section>
 );
+
+
 
 function Common() {
   const location = useLocation();

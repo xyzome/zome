@@ -3,7 +3,7 @@ import React from 'react';
 function Contact() {
   return (
     <>
-      <section className="bg-white dark:bg-gray-900 pt-8">
+      <section className=" dark:bg-gray-900 pt-8">
         <div
           className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md"
           data-aos="fade-up"

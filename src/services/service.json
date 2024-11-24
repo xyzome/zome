@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title": "App Development",
-            "image": "https://example.com/images/app-development.jpg",
+            "image": "https://i.postimg.cc/43vbKqcL/app-development-illustration-concept-a-man-designed-a-prototype-for-a-png-309893-removebg-preview.png",
             "description": "Embark on a journey of digital evolution with our Mobile App Alchemy. From concept to code, we sculpt innovative experiences that seamlessly blend form and function, transforming visions into interactive realities.",
             "bullets": [
                 "Android ",
@@ -44,7 +44,7 @@
         {
             "id": 2,
             "title": "Web Development",
-            "image": "https://example.com/images/web-development.jpg",
+            "image": "https://i.postimg.cc/gjp0xtvD/images-removebg-preview.png",
             "description": "Build robust and scalable websites with our expert web development services. We turn your ideas into responsive, high-performing web solutions.",
             "bullets": [
                 "React",
@@ -85,7 +85,7 @@
         {
             "id": 3,
             "title": "Cloud Hosting",
-            "image": "https://example.com/images/cloud-hosting.jpg",
+            "image": "https://i.postimg.cc/zXM9pbQm/cloud-removebg-preview.png",
             "description": "Leverage the power of the cloud with our secure and scalable hosting solutions. Our services ensure optimal performance and uptime for your applications.",
             "bullets": [
                 "AWS",
@@ -124,7 +124,7 @@
         {
             "id": 4,
             "title": "Digital Marketing",
-            "image": "https://example.com/images/digital-marketing.jpg",
+            "image": "https://i.postimg.cc/nzH5MvXm/png-transparent-digital-marketing-services-marketing-business-digital-market-search-engine-optimizat.png",
             "description": "Enhance your brand visibility and drive traffic with our result-oriented digital marketing services.",
             "bullets": [
                 "SEO (Search Engine Optimization)",
@@ -165,7 +165,7 @@
         {
             "id": 5,
             "title": "UI/UX Design",
-            "image": "https://example.com/images/ui-ux-design.jpg",
+            "image": "https://i.postimg.cc/286D0f8W/png-transparent-mobile-app-ui-ux-design-illustration-removebg-preview.png",
             "description": "Craft intuitive and aesthetically pleasing designs that enhance user experience. Our design process bridges creativity and usability to deliver exceptional interfaces.",
             "bullets": [
                 "Figma",
@@ -204,7 +204,7 @@
         {
             "id": 6,
             "title": "Social Media Marketing",
-            "image": "https://example.com/images/social-media-marketing.jpg",
+            "image": "https://i.postimg.cc/L55b32B6/outsource-social-media-marketing-services-removebg-preview.png",
             "description": "Elevate your online presence with targeted and engaging social media marketing campaigns. Connect with your audience and build your brand effectively.",
             "bullets": [
                 "Campaign Management",
