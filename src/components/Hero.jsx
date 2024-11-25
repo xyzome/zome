@@ -12,18 +12,18 @@ function Hero() {
           data-aos-offset="200" // Offset from the viewport
           data-aos-delay="100" // Delay before the animation starts
         >
-          <h1
-            className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white" // Text color remains white for contrast
+          <h6
+            className="max-w-2xl mb-4 text-3xl font-extrabold tracking-tight leading-none md:text-3xl xl:text-5xl text-white" // Text color remains white for contrast
             data-aos="fade-up" // Add AOS attribute for animation
           >
             <Typewriter
               options={{
-                strings: ['Innovative Web and App Development Services', 'Custom Software Solutions', 'Mobile App Development', 'Creative UI/UX Design', 'E-commerce Solutions', 'Tailored CRM Solutions'],
+                strings: [' Website Development', 'Custom Software Solutions', 'Mobile App Development', 'Creative UI/UX Design', 'E-Commerce Solutions', 'Tailored CRM Solutions'],
                 autoStart: true,
                 loop: true
               }}
             />
-          </h1>
+          </h6>
           <p
             className="max-w-2xl mb-6 font-light text-gray-400 lg:mb-8 md:text-lg lg:text-xl" // Make sure text color contrasts well with bg
             data-aos="fade-up" // Add AOS attribute for animation
