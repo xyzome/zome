@@ -2,7 +2,7 @@ import React from 'react';
 
 function CTA() {
   return (
-    <section className="bg-gray-900" aria-labelledby="cta-section"> {/* Set bg-gray-900 to the root section */}
+    <section className="!bg-gray-900" aria-labelledby="cta-section">
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div className="max-w-screen-md">
           <h2

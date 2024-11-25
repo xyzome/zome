@@ -92,7 +92,7 @@ const CompletedProjects = () => {
     }, []);
 
     return (
-        <div className="bg-gray-900 text-white p-6 md:p-8">
+        <div className="!bg-gray-900 text-white p-6 md:p-8">
             {/* Heading Section */}
             <h2 className="text-xl md:text-2xl font-bold mb-4 text-center">
                 Completed Projects
@@ -104,10 +104,9 @@ const CompletedProjects = () => {
 
             {/* Scroll Buttons */}
             <div className="relative">
-            
                 {/* Horizontal Scroll Section */}
                 <div
-                    className="overflow-x-auto no-scrollbar " 
+                    className="overflow-x-auto no-scrollbar"
                     ref={scrollContainerRef} // Reference for scrolling
                     onMouseEnter={stopAutoScroll} // Stop auto scroll on hover
                     onMouseLeave={startAutoScroll} // Restart auto scroll on mouse leave
@@ -115,15 +114,13 @@ const CompletedProjects = () => {
                     <div
                         className="flex space-x-4 snap-x snap-mandatory"
                         style={{ minWidth: "100%" }}
-                        
                     >
                         {projects.map((project) => (
                             <a
                                 href={project.link}
                                 target="_blank"
                                 key={project.id}
-                                className="flex-shrink-0 w-[90%] sm:w-1/2 md:w-1/3 snap-start bg-gray-900 rounded-lg shadow-lg hover:scale-90 transition-transform duration-200 cursor-pointer overflow-hidden border-2 border-white"
-
+                                className="flex-shrink-0 w-[90%] sm:w-1/2 md:w-1/3 snap-start bg-gray-900 !bg-gray-900 rounded-lg shadow-lg hover:scale-90 transition-transform duration-200 cursor-pointer overflow-hidden border-2 border-white"
                             >
                                 <img
                                     src={project.image}
@@ -144,6 +141,7 @@ const CompletedProjects = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 
