@@ -40,7 +40,7 @@ function Features() {
                 />
               </svg>
             </div>
-            <h3 className="mb-2 text-xl font-bold dark:text-white">Gathering Requirements</h3>
+            <h3 className="mb-2 text-xl font-bold text-white">Gathering Requirements</h3>
             <p className="text-gray-500 dark:text-gray-400">
               Understanding your needs and defining the project scope to ensure we meet all your expectations and business goals.
             </p>
@@ -64,7 +64,7 @@ function Features() {
                 />
               </svg>
             </div>
-            <h3 className="mb-2 text-xl font-bold dark:text-white">Design</h3>
+            <h3 className="mb-2 text-xl font-bold text-white">Design</h3>
             <p className="text-gray-500 dark:text-gray-400">
               Creating intuitive and visually appealing designs that provide a seamless user experience and align with your brand identity.
             </p>
@@ -93,7 +93,7 @@ function Features() {
                 />
               </svg>
             </div>
-            <h3 className="mb-2 text-xl font-bold dark:text-white">Development</h3>
+            <h3 className="mb-2 text-xl font-bold text-white">Development</h3>
             <p className="text-gray-500 dark:text-gray-400">
               Writing clean and efficient code to bring your designs to life, ensuring functionality and scalability.
             </p>
@@ -122,7 +122,7 @@ function Features() {
                 />
               </svg>
             </div>
-            <h3 className="mb-2 text-xl font-bold dark:text-white">Testing</h3>
+            <h3 className="mb-2 text-xl font-bold text-white">Testing</h3>
             <p className="text-gray-500 dark:text-gray-400">
               Conducting thorough testing to ensure the application works smoothly, free from bugs, and provides the desired performance.
             </p>
@@ -148,7 +148,7 @@ function Features() {
                 />
               </svg>
             </div>
-            <h3 className="mb-2 text-xl font-bold dark:text-white">Deployment</h3>
+            <h3 className="mb-2 text-xl font-bold text-white">Deployment</h3>
             <p className="text-gray-500 dark:text-gray-400">
               Deploying the application to production with the utmost care, ensuring that it is live, accessible, and secure.
             </p>
