@@ -149,14 +149,16 @@ const DevelopmentProcess = ({ service, open, toggleAccordion }) => (
       {/* Gradient Background */}
       <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 opacity-50"></div>
 
-      {/* Circular Image with Shadow and Border */}
+      {/* Circular Image with Shadow and Border
       <div className="absolute top-0 right-0 h-64 w-64">
         <img
           src={service.image}
           alt="Service Visual"
           className="w-full h-full object-cover rounded-full shadow-2xl border-blue-100 border-2"
         />
-      </div>
+      </div> */}
+
+      
     </div>
 
 

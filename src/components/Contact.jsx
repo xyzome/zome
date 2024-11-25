@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 
 function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false); // Track submission state
+
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -21,7 +23,7 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setIsSubmitting(true); // Start submission process
     try {
       const response = await axios.post(
         'https://api.sheetbest.com/sheets/8bdfa284-f9cf-468c-98ac-f07f33b451a8',
@@ -55,6 +57,8 @@ function Contact() {
         title: 'Submission Failed',
         text: 'Something went wrong. Please try again later.',
       });
+    } finally {
+      setIsSubmitting(false); // Reset submission state
     }
   };
 
@@ -193,8 +197,9 @@ function Contact() {
           <button
             type="submit"
             className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-fit"
+            disabled={isSubmitting} // Disable button while submitting
           >
-            Send Message
+            {isSubmitting ? 'Sending...' : 'Send Message'} {/* Button text changes */}
           </button>
         </form>
       </div>
