@@ -6,13 +6,14 @@ import { Twitter, Instagram } from 'lucide-react';
 
 function Footer() {
   const services = [
-    { id: 1, name: 'App Development' },
-    { id: 2, name: 'Web Development' },
-    { id: 3, name: 'Cloud Hosting' },
-    { id: 4, name: 'Digital Marketing' },
-    { id: 5, name: 'UI & UX Design' },
-    { id: 6, name: 'Social Media Marketing' },
+    { id: 1, name: 'App Development', route: 'app-development' },
+    { id: 2, name: 'Web Development', route: 'web-development' },
+    { id: 3, name: 'Cloud Hosting', route: 'cloud-hosting' },
+    { id: 4, name: 'Digital Marketing', route: 'digital-marketing' },
+    { id: 5, name: 'UI & UX Design', route: 'ui-ux-design' },  // Updated
+    { id: 6, name: 'Social Media Marketing', route: 'social-media-marketing' }
   ];
+
 
   return (
     <footer className="bg-gray-900 text-white" data-aos="fade-up">
@@ -33,7 +34,7 @@ function Footer() {
                 {services.map((service) => (
                   <li className="mb-4" key={service.id}>
                     <Link
-                      to="/service"
+                      to={ `/service/${service.route}`}
                       state={{ serviceId: service.id }}
                       onClick={scrollEffect}
                       className="hover:underline"

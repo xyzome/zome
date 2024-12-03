@@ -3,9 +3,10 @@ import carbon from '../images/carbonfix.png';
 import funeral from '../images/funeral.png';
 import perfume from '../images/perfume.png';
 import dentist from '../images/dentist.png';
+
 const CompletedProjects = () => {
-    const scrollContainerRef = useRef(null); // Reference to the scrollable container
-    const autoScrollRef = useRef(null); // To keep track of the auto-scroll interval
+    const scrollContainerRef = useRef(null);
+    const autoScrollRef = useRef(null);
 
     const projects = [
         {
@@ -13,52 +14,51 @@ const CompletedProjects = () => {
             category: "NGO",
             title: "Carbon Compensation Platform",
             image: carbon,
-            link:"https://carbonfix.in"
+            link: "https://carbonfix.in",
+            alt: "Carbon Compensation Platform homepage screenshot showing an eco-friendly interface.",
         },
         {
             id: 2,
             category: "Compassionate Care",
             title: "Funeral Service",
             image: funeral,
-            link:"https://shahfuneralservice.in"
+            link: "https://shahfuneralservice.in",
+            alt: "Funeral Service platform with organized service options for end-of-life arrangements.",
         },
         {
             id: 3,
             category: "Grocery",
-            title: "Uimne Perfume ",
+            title: "Uimne Perfume",
             image: perfume,
-            link:"https://perfume-reactwebsite.vercel.app"
+            link: "https://perfume-reactwebsite.vercel.app",
+            alt: "Uimne Perfume website with a luxurious collection of fragrances.",
         },
         {
             id: 4,
             category: "Health Care",
-            title: "Orthosqure ",
+            title: "Orthosqure",
             image: dentist,
-            link:"https://consult.orthosquare.com/"
+            link: "https://consult.orthosquare.com/",
+            alt: "Orthosqure dental consultation website homepage featuring patient-focused services.",
         },
     ];
 
-    // Function to handle manual scroll
     const handleScroll = (direction) => {
         if (scrollContainerRef.current) {
-            const scrollAmount = scrollContainerRef.current.offsetWidth; // Scroll by the width of the container
-            const scrollLeft = scrollContainerRef.current.scrollLeft; // Current scroll position
-            const scrollWidth = scrollContainerRef.current.scrollWidth; // Total scrollable width
+            const scrollAmount = scrollContainerRef.current.offsetWidth;
+            const scrollLeft = scrollContainerRef.current.scrollLeft;
+            const scrollWidth = scrollContainerRef.current.scrollWidth;
 
             if (direction === "next") {
-                // If at the last card, reset to the first card without scrolling left
                 if (scrollLeft + scrollAmount >= scrollWidth - 1) {
-                    // Scroll back to the first card by resetting scroll position
                     scrollContainerRef.current.scrollTo({ left: 0, behavior: "smooth" });
                 } else {
-                    // Scroll to the next card
                     scrollContainerRef.current.scrollBy({
                         left: scrollAmount,
                         behavior: "smooth",
                     });
                 }
             } else {
-                // Scroll backward (previous card)
                 scrollContainerRef.current.scrollBy({
                     left: -scrollAmount,
                     behavior: "smooth",
@@ -67,81 +67,87 @@ const CompletedProjects = () => {
         }
     };
 
-    // Auto scroll functionality
     const startAutoScroll = () => {
-        if (autoScrollRef.current) return; // Prevent multiple intervals
+        if (autoScrollRef.current) return;
         autoScrollRef.current = setInterval(() => {
-            handleScroll("next"); // Auto scroll to the next card
-        }, 3000); // Scroll every 2 seconds
+            handleScroll("next");
+        }, 4000);
     };
 
     const stopAutoScroll = () => {
         if (autoScrollRef.current) {
-            clearInterval(autoScrollRef.current); // Stop auto scroll
+            clearInterval(autoScrollRef.current);
             autoScrollRef.current = null;
         }
     };
 
     useEffect(() => {
-        startAutoScroll(); // Start auto scroll when the component mounts
-
-        // Cleanup on unmount to stop auto scroll
+        startAutoScroll();
         return () => {
             stopAutoScroll();
         };
     }, []);
 
     return (
-        <div className="!bg-gray-900 text-white p-6 md:p-8">
-            {/* Heading Section */}
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-center">
-                Completed Projects
-            </h2>
-            <p className="mb-6 md:mb-8 text-sm md:text-base text-center">
-                *Elevating success, one completed project at a time - where innovation meets
-                completion, and dreams turn into tangible achievements!*
-            </p>
+        <>
+         
 
-            {/* Scroll Buttons */}
-            <div className="relative">
-                {/* Horizontal Scroll Section */}
-                <div
-                    className="overflow-x-auto no-scrollbar"
-                    ref={scrollContainerRef} // Reference for scrolling
-                    onMouseEnter={stopAutoScroll} // Stop auto scroll on hover
-                    onMouseLeave={startAutoScroll} // Restart auto scroll on mouse leave
-                >
+            <div className="bg-gray-900 text-white p-6 md:p-8">
+                <h2 className="text-xl md:text-2xl font-bold mb-4 text-center">
+                    Completed Projects
+                </h2>
+                <p className="mb-6 md:mb-8 text-sm md:text-base text-center">
+                    Elevating success, one completed project at a time - where innovation meets
+                    completion, and dreams turn into tangible achievements!
+                </p>
+
+                <div className="relative">
                     <div
-                        className="flex space-x-4 snap-x snap-mandatory"
-                        style={{ minWidth: "100%" }}
+                        className="overflow-x-auto no-scrollbar"
+                        ref={scrollContainerRef}
+                        onMouseEnter={stopAutoScroll}
+                        onMouseLeave={startAutoScroll}
+                        role="region"
+                        aria-label="Scrollable list of completed projects"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                            if (e.key === "ArrowLeft") handleScroll("prev");
+                            if (e.key === "ArrowRight") handleScroll("next");
+                        }}
                     >
-                        {projects.map((project) => (
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                key={project.id}
-                                className="flex-shrink-0 w-[90%] sm:w-1/2 md:w-1/3 snap-start bg-gray-900 !bg-gray-900 rounded-lg shadow-lg hover:scale-90 transition-transform duration-200 cursor-pointer overflow-hidden border-2 border-white"
-                            >
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-40 sm:h-48 object-cover"
-                                />
-                                <div className="p-4">
-                                    <h3 className="text-sm sm:text-lg font-bold mb-2">
-                                        {project.title}
-                                    </h3>
-                                    <p className="text-gray-400 text-xs sm:text-sm">
-                                        {project.category}
-                                    </p>
-                                </div>
-                            </a>
-                        ))}
+                        <div className="flex space-x-4 snap-x snap-mandatory" style={{ minWidth: "100%" }}>
+                            {projects.map((project) => (
+                                <article
+                                    key={project.id}
+                                    className="flex-shrink-0 w-[90%] sm:w-1/2 md:w-1/3 snap-start bg-gray-900 rounded-lg shadow-lg hover:scale-95 transition-transform duration-200 cursor-pointer overflow-hidden border-2 border-white"
+                                    aria-labelledby={`project-title-${project.id}`}
+                                    role="article"
+                                >
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                        <img
+                                            src={project.image}
+                                            alt={project.alt}
+                                            className="w-full h-40 sm:h-48 object-cover"
+                                        />
+                                    </a>
+                                    <div className="p-4">
+                                        <h3
+                                            id={`project-title-${project.id}`}
+                                            className="text-sm sm:text-lg font-bold mb-2"
+                                        >
+                                            {project.title}
+                                        </h3>
+                                        <p className="text-gray-400 text-xs sm:text-sm">
+                                            {project.category}
+                                        </p>
+                                    </div>
+                                </article>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
+        </>
     );
 };
 

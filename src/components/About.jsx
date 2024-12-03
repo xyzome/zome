@@ -1,3 +1,5 @@
+import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Users, CheckCircle, Award, Briefcase } from 'lucide-react';
 import CountUp from 'react-countup';
 import methodology from '../images/methodology.png';
@@ -7,6 +9,18 @@ import scrollToTop from '../hooks/Scroll';
 const AboutUs = () => {
     return (
         <div className="bg-gray-900 text-gray-100">
+            <Helmet>
+                <title>About Us - Unlocking Business Potential | Your Brand</title>
+                <meta name="description" content="Discover how we set trends and deliver innovative solutions tailored to help your business unlock its fullest potential." />
+                <meta name="keywords" content="About Us, Innovative Solutions, Business Growth, Methodology, Why Choose Us, Achievements" />
+                <meta name="author" content="Zome" />
+                <meta property="og:title" content="About Us - Unlocking Business Potential | Your Brand" />
+                <meta property="og:description" content="Explore our methodology, achievements, and why choosing us can help your business thrive." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://zome.in/about" />
+                <meta property="og:image" content="https://www.zome.in/assets/methodology-CCjzv7um.png" />   
+            </Helmet>
+
             {/* Hero Section */}
             <section className="relative overflow-hidden bg-gray-900 text-white" data-aos="fade-up">
                 <div className="container mx-auto px-4 py-20 text-center">
@@ -59,32 +73,6 @@ const AboutUs = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Achievements Section */}
-            {/* <section className="py-16 bg-gray-900" data-aos="zoom-in-up">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-4xl font-bold text-center mb-12 text-gray-100">Achievements</h2>
-                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-12">
-                        {[
-                            { number: 2, label: 'Years', icon: Briefcase, description: 'Working With Passion' },
-                            { number: 69, label: 'Customers', icon: Users, description: 'Satisfied Customers' },
-                            { number: 50, label: 'Projects', icon: CheckCircle, description: 'We Have Completed' },
-                            { number: 10, label: 'Awards', icon: Award, description: 'Achievement For Service' },
-                        ].map((item, idx) => (
-                            <div key={idx} className="flex flex-col items-center text-center space-y-2" data-aos="fade-up">
-                                <div className="w-16 h-16 flex items-center justify-center bg-gray-600 rounded-full text-white mb-4">
-                                    <item.icon className="w-8 h-8" />
-                                </div>
-                                <h3 className="text-4xl font-bold text-gray-200">
-                                    <CountUp start={0} end={item.number} duration={15} /><sup>+</sup>
-                                </h3>
-                                <p className="text-xl font-semibold">{item.label}</p>
-                                <p className="text-gray-400">{item.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section> */}
 
             {/* Why Choose Us Section */}
             <section className="py-16 px-4 bg-gray-900 text-gray-100">

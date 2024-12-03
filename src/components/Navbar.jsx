@@ -2,41 +2,41 @@ import React, { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '../images/logo.png';
-import scrollToTop from '../hooks/Scroll'
-
+import scrollToTop from '../hooks/Scroll';
 
 const Dropdown = ({ title, items, isOpen, toggle }) => {
-  const handleItemClick = (item) => {
-    toggle(false);  // Close the dropdown after an item is clicked
-    // You can add any further actions like navigation or tracking here if needed.
-  };
-
   return (
     <div className="relative">
       <button
+        aria-expanded={isOpen}
+        aria-haspopup="true"
         onClick={() => toggle(!isOpen)}
         className="flex items-center space-x-2 text-white hover:text-gray-300 focus:outline-none"
       >
         <span>{title}</span>
         <ChevronDown className="w-4 h-4" />
       </button>
-      <div
-        className={`absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-gray-800 ring-1 ring-gray-700 z-50 transition-all duration-200 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 hidden'}`}
+      <ul
+        id={`dropdown-${title}`}
+        role="menu"
+        className={`absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-gray-800 ring-1 ring-gray-700 z-50 transition-all duration-200 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 hidden'
+          }`}
       >
-        <div className="py-2">
-          {items.map((item) => (
+        {items.map((item) => (
+          <li key={item.id} role="menuitem">
             <Link
-              key={item.id}
-              to="/service"
+              to={ `/service/${item.route}`}
               state={{ serviceId: item.id }}
-              onClick={() => handleItemClick(item)}  // Close dropdown on item click
-              className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+              onClick={() => {
+                toggle(false);
+                scrollToTop();
+              }}              className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               {item.name}
             </Link>
-          ))}
-        </div>
-      </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
@@ -46,20 +46,22 @@ const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const services = [
-    { id: 1, name: 'App Development', link: 'Homepage' },
-    { id: 2, name: 'Web Development', link: 'Homepage' },
-    { id: 3, name: 'Cloud Hosting', link: 'Homepage' },
-    { id: 4, name: 'Digital Marketing', link: 'Homepage' },
-    { id: 5, name: 'UI & UX Design', link: 'Homepage' },
-    { id: 6, name: 'Social Media Marketing', link: 'Homepage' },
+    { id: 1, name: 'App Development', route: 'app-development' },
+    { id: 2, name: 'Web Development', route: 'web-development' },
+    { id: 3, name: 'Cloud Hosting', route: 'cloud-hosting' },
+    { id: 4, name: 'Digital Marketing', route: 'digital-marketing' },
+    { id: 5, name: 'UI & UX Design', route: 'ui-ux-design' },  // Updated
+    { id: 6, name: 'Social Media Marketing', route: 'social-media-marketing' }
   ];
 
+
   const handleLinkClick = () => {
-    setIsOpen(false); // Close the mobile menu on navigation
+    setIsOpen(false);
+    scrollToTop();
   };
 
   return (
-    <nav className="bg-gray-900 shadow-lg fixed w-full z-50">
+    <nav className="bg-gray-900 shadow-lg fixed w-full z-50" aria-label="Main Navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo Section */}
@@ -73,27 +75,36 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-gray-300" onClick={() => { handleLinkClick(); scrollToTop(); }}>
-              Home
-            </Link>
-            <Link to="/about" className="text-white hover:text-gray-300" onClick={() => { handleLinkClick(); scrollToTop(); }}>
-              About
-            </Link>
-            <Dropdown
-              title="Services"
-              items={services}
-              isOpen={isServicesOpen}
-              toggle={setIsServicesOpen}
-            />
-            <Link to="/contact" className="text-white hover:text-gray-300" onClick={() => { handleLinkClick(); scrollToTop(); }}>
-              Contact
-            </Link>
-          </div>
+          <ul className="hidden md:flex items-center space-x-8" role="menu">
+            <li>
+              <Link to="/" className="text-white hover:text-gray-300" onClick={handleLinkClick}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="text-white hover:text-gray-300" onClick={handleLinkClick}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Dropdown
+                title="Services"
+                items={services}
+                isOpen={isServicesOpen}
+                toggle={setIsServicesOpen}
+              />
+            </li>
+            <li>
+              <Link to="/contact" className="text-white hover:text-gray-300" onClick={handleLinkClick}>
+                Contact
+              </Link>
+            </li>
+          </ul>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
+              aria-label="Toggle Mobile Menu"
               onClick={() => setIsOpen(!isOpen)}
               className="text-white hover:text-gray-300 focus:outline-none"
             >
@@ -105,28 +116,34 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-800 z-50">
-          <div className="space-y-1 px-4 py-2">
+        <ul className="md:hidden bg-gray-800 z-50" role="menu">
+          <li>
             <Link
               to="/"
               className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md"
-              onClick={handleLinkClick} // Close mobile menu on link click
+              onClick={handleLinkClick}
             >
               Home
             </Link>
+          </li>
+          <li>
             <Link
               to="/about"
               className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md"
-              onClick={handleLinkClick} // Close mobile menu on link click
+              onClick={handleLinkClick}
             >
               About
             </Link>
+          </li>
+          <li>
             <Dropdown
               title="Services"
               items={services}
               isOpen={isServicesOpen}
               toggle={setIsServicesOpen}
             />
+          </li>
+          <li>
             <Link
               to="/contact"
               className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md"
@@ -134,12 +151,11 @@ const Navbar = () => {
             >
               Contact
             </Link>
-          </div>
-        </div>
+          </li>
+        </ul>
       )}
     </nav>
   );
 };
 
 export default Navbar;
-
