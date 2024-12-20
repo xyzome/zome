@@ -69,9 +69,8 @@ const Navbar = () => {
             <img
               src={Logo}
               alt="Zome Logo"
-              className="h-10 w-auto rounded-full"
+              className="h-12 w-auto rounded-full cursor-pointer"
             />
-            <span className="text-white text-xl font-semibold">ZOME</span>
           </div>
 
           {/* Desktop Menu */}
