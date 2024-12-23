@@ -46,19 +46,36 @@ function Footer() {
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase">Follow us</h2>
-              <ul className="text-gray-400 font-medium">
-                <li className="mb-4">
+              <ul className="text-gray-400 font-medium space-y-4">
+                <li>
                   <a
-                    href="#"
-                    className="hover:underline" aria-label="ZOME Instagram">Instagram</a>
+                    href="https://www.instagram.com/zometechagency?igsh=eWFhZXcxNjh2ZTg3"
+                    className="hover:underline"
+                    aria-label="ZOME Instagram"
+                  >
+                    Instagram
+                  </a>
                 </li>
                 <li>
-                  <a href="https://x.com/zome_techagency" className="hover:underline" aria-label="ZOME Twitter">Twitter</a>
+                  <a
+                    href="https://x.com/zome_techagency"
+                    className="hover:underline"
+                    aria-label="ZOME Twitter"
+                  >
+                    Twitter
+                  </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/zome-tech-agency-963a2233a/" className="hover:underline" aria-label="ZOME Twitter">LinkedIn</a>
+                  <a
+                    href="https://www.linkedin.com/in/zome-tech-agency-963a2233a/"
+                    className="hover:underline"
+                    aria-label="ZOME LinkedIn"
+                  >
+                    LinkedIn
+                  </a>
                 </li>
               </ul>
+
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase">Other Links</h2>
