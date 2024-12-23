@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../images/logo.png';
 import { Link } from 'react-router-dom';
 import scrollEffect from '../hooks/Scroll';
-import { Twitter, Instagram } from 'lucide-react';
+import { Twitter, Instagram, Linkedin } from 'lucide-react';
 
 function Footer() {
   const services = [
@@ -49,11 +49,14 @@ function Footer() {
               <ul className="text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://www.instagram.com/zometechagency?igsh=eWFhZXcxNjh2ZTg3"
+                    href="#"
                     className="hover:underline" aria-label="ZOME Instagram">Instagram</a>
                 </li>
                 <li>
                   <a href="https://x.com/zome_techagency" className="hover:underline" aria-label="ZOME Twitter">Twitter</a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/zome-tech-agency-963a2233a/" className="hover:underline" aria-label="ZOME Twitter">LinkedIn</a>
                 </li>
               </ul>
             </div>
@@ -81,7 +84,7 @@ function Footer() {
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             {/* Instagram Icon from lucide-react */}
             <a
-              href="https://www.instagram.com/zometechagency?igsh=eWFhZXcxNjh2ZTg3"
+              href="#"
               className="text-gray-400 hover:text-white ms-5"
               aria-label="ZOME Instagram"
             >
@@ -95,6 +98,15 @@ function Footer() {
               aria-label="ZOME Twitter"
             >
               <Twitter className="w-4 h-4" />
+            </a>
+
+            {/* LinkedIn Icon from lucide-react */}
+            <a
+              href="https://www.linkedin.com/in/zome-tech-agency-963a2233a/"
+              className="text-gray-400 hover:text-white ms-5"
+              aria-label="ZOME LinkedIn"
+            >
+              <Linkedin className="w-4 h-4" />
             </a>
           </div>
 
