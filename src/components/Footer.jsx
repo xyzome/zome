@@ -81,7 +81,7 @@ function Footer() {
               <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase">Other Links</h2>
               <ul className="text-gray-400 font-medium">
                 <li className="mb-4">
-                  <Link to="/" className="hover:underline" onClick={scrollEffect} aria-label="Home Page">Home</Link>
+                  <Link to="" className="hover:underline" onClick={scrollEffect} aria-label="Home Page">Home</Link>
                 </li>
                 <li className="mb-4">
                   <Link to="/about" className="hover:underline" onClick={scrollEffect} aria-label="About us page">About</Link>
