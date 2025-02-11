@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "zome",
   "private": true,
   "version": "0.0.0",
@@ -36,5 +37,27 @@
     "postcss": "^8.4.40",
     "tailwindcss": "^3.4.7",
     "vite": "^5.3.4"
+=======
+  "name": "creative-agency",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "next": "13.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-floating-whatsapp": "^5.0.8",
+    "react-icons": "^4.8.0",
+    "react-slick": "^0.29.0",
+    "sass": "^1.61.0",
+    "slick-carousel": "^1.8.1"
+>>>>>>> 68c698b (Updated website with a new UI)
   }
 }
